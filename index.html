@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>¿Quieres ser mi Valentín? 💖</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            background-color: #ffccd5;
+        }
+        h1 {
+            margin-top: 100px;
+        }
+        button {
+            padding: 15px 25px;
+            font-size: 18px;
+            margin: 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        #si {
+            background-color: #ff4d6d;
+            color: white;
+        }
+        #no {
+            background-color: gray;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+<h1>¿Quieres ser mi Valentín? 💘</h1>
+
+<button id="si" onclick="respuesta()">Sí 💖</button>
+<button id="no" onmouseover="mover()">No 😢</button>
+
+<audio autoplay loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mp3">
+</audio>
+
+<script>
+function respuesta(){
+    document.body.innerHTML = "<h1>Sabía que dirías que sí 😍💍</h1>";
+}
+
+function mover(){
+    let x = Math.random() * window.innerWidth;
+    let y = Math.random() * window.innerHeight;
+    document.getElementById("no").style.left = x + "px";
+    document.getElementById("no").style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
